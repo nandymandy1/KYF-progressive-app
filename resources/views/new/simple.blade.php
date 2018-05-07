@@ -142,7 +142,7 @@
     el: '#app',
     data() {
       return {
-        factory_id: 1,
+        factory_id: {{Auth::user()->factory_id}},
         styles: [],
         newStyle: {
           id: '',
@@ -157,7 +157,7 @@
           qty:'',
           sam:'',
           delivery_date:'',
-          factory_id:1
+          factory_id:{{Auth::user()->factory_id}}
         }
       }
     },

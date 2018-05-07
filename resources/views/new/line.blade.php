@@ -86,7 +86,7 @@
         el:'#app',
         data(){
             return{
-            factory_id:1,
+            factory_id:{{Auth::user()->factory_id}},
             lines:[],
             orders:[],
             newLine:{
@@ -96,7 +96,7 @@
                 chkr:'',
                 order_id:'',
                 qty:'',
-                factory_id: 1
+                factory_id: {{Auth::user()->factory_id}}
                 }
             }
         },

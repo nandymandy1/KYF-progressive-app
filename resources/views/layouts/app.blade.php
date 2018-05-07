@@ -41,6 +41,8 @@
     <script src="{{ asset('./js/vue.js') }}" charset="utf-8"></script>
     <script src="{{ asset('./js/axios.js') }}" charset="utf-8"></script>
     <script src="{{ asset('./js/Chart.min.js')}}" charset="utf-8"></script>
+    <script src="{{ asset('./js/basic-form-elements.js')}}" charset="utf-8"></script>
+    
     @yield('scripts')
 </body>
 </html>

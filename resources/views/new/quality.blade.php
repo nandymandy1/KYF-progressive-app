@@ -68,11 +68,11 @@
         el: '#app',
         data() {
             return {
-                factory_id: 1,
+                factory_id: {{Auth::user()->factory_id}},
                 orders: [],
                 quality:[],
                 newQuality:{
-                    factory_id: 1,
+                    factory_id: {{Auth::user()->factory_id}},
                     order_id: '',
                     p_pcs: '',
                     qty:''

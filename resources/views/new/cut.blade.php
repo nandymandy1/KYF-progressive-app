@@ -40,8 +40,9 @@
       </div>
       <div class="modal-body">
         <div class="form-group">
-            <label for="">Cutting Quantity</label>
-            <input type="number" name="qty" v-model="newCut.qty" class="form-control">
+            <div class="form-line">
+                <input type="text" placeholder="Cutting Quantity" name="qty" v-model="newCut.qty" class="form-control">
+            </div>
         </div>        
         <div class="form-group">
             <label for="">Order</label>
@@ -69,10 +70,10 @@
                 cutting:[],
                 orders:[],
                 order_names:[],
-                factory_id:1,
+                factory_id:{{Auth::user()->factory_id}},
                 newCut:{
                     order_id:'',
-                    factory_id: 1,
+                    factory_id: {{Auth::user()->factory_id}},
                     qty:''
                 }
             }

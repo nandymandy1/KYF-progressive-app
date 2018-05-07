@@ -66,13 +66,13 @@
         el: '#app',
         data(){
             return{
-                factory_id:1,
+                factory_id:{{Auth::user()->factory_id}},
                 orders:[],
                 finishes:[],
                 finOrder:{
                     order_id:'',
                     fqty:'',
-                    factory_id: 1
+                    factory_id: {{Auth::user()->factory_id}}
                 }
             }
         }, 

@@ -43,7 +43,7 @@
     <div class="row clearfix">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="card">
-                <div class="header bg-blue">Order Progress</div>
+                <div class="header bg-red">Order Progress</div>
                 <div class="body">
                     <table class="table table-hover dashboard-task-infos">
                         <thead>
@@ -57,17 +57,17 @@
                             <tr>
                                 <td>1</td>
                                 <td>Cutting</td>
-                                <td><div class="progress"><div class="progress-bar" :class="getClass(p_cut)" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" v-bind:style="{width: p_cut + '%'}"></div></div></td>
+                                <td><div class="progress"><div class="progress-bar" :class="getClass(p_cut)" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" :style="{width: p_cut + '%'}"></div></div></td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>Sewing</td>
-                                <td><div class="progress"><div class="progress-bar" :class="getClass(p_sew)" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"  v-bind:style="{width: p_sew + '%'}"></div></div></td>
+                                <td><div class="progress"><div class="progress-bar" :class="getClass(p_sew)" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"  :style="{width: p_sew + '%'}"></div></div></td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>Finishing</td>
-                                <td><div class="progress"><div class="progress-bar" :class="getClass(p_fin)" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" v-bind:style="{width: p_fin + '%'}"></div></div></td>
+                                <td><div class="progress"><div class="progress-bar" :class="getClass(p_fin)" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" :style="{width: p_fin + '%'}"></div></div></td>
                             </tr>
                         </tbody>
                     </table>
@@ -84,7 +84,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="card">
-                <div class="header bg-blue">Sewing</div>
+                <div class="header bg-green">Sewing</div>
                 <div class="body">
                     <canvas id="sew" height="150"></canvas>
                 </div>
@@ -92,7 +92,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="card">
-                <div class="header bg-blue">Efficiency</div>
+                <div class="header bg-pink">Efficiency</div>
                 <div class="body">
                     <canvas id="effi" height="150"></canvas>
                 </div>
@@ -100,7 +100,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="card">
-                <div class="header bg-blue">Finishing</div>
+                <div class="header bg-yellow">Finishing</div>
                 <div class="body">
                     <canvas id="fin" height="150"></canvas>
                 </div>
@@ -108,7 +108,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="card">
-                <div class="header bg-blue">DHU</div>
+                <div class="header bg-orange">DHU</div>
                 <div class="body">
                     <canvas id="dhu" height="150"></canvas>
                 </div>
@@ -116,7 +116,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="card">
-                <div class="header bg-blue">Passed vs Failed</div>
+                <div class="header bg-info">Passed vs Failed</div>
                 <div class="body">
                     <canvas id="quality" height="150"></canvas>
                 </div>
@@ -222,7 +222,7 @@
                     datasets: [{
                         label: "Sewing",
                         data: sew,
-                        backgroundColor: 'rgba(155, 89, 182, 0.8)'
+                        backgroundColor: 'rgba(127, 140, 141, 0.8)'
                     }]
                 },
                   options: {
@@ -264,10 +264,10 @@
                     datasets: [{
                         label: "Efficiency",
                         data: eff,
-                        borderColor: 'rgba(0, 188, 212, 0.75)',
-                          backgroundColor: 'rgba(0, 188, 212, 0.3)',
-                          pointBorderColor: 'rgba(0, 188, 212, 0)',
-                          pointBackgroundColor: 'rgba(0, 188, 212, 0.9)',
+                        borderColor: 'rgba(41, 128, 185, 0.75)',
+                          backgroundColor: 'rgba(127, 179, 213, 0.3)',
+                          pointBorderColor: 'rgba(127, 179, 213, 0)',
+                          pointBackgroundColor: 'rgba(212, 230, 241, 0.9)',
                           pointBorderWidth: 1
                     }]
                 },
@@ -318,7 +318,7 @@
                     datasets: [{
                         label: "Finishing",
                         data: fin,
-                        backgroundColor: 'rgba(155, 89, 182, 0.8)'
+                        backgroundColor: 'rgba(245, 176, 65, 0.8)'
                     }]
                 },
                   options: {
@@ -376,10 +376,10 @@
                     datasets: [{
                         label: "DHU",
                         data: dhu,
-                        borderColor: 'rgba(0, 188, 212, 0.75)',
-                          backgroundColor: 'rgba(0, 188, 212, 0.3)',
-                          pointBorderColor: 'rgba(0, 188, 212, 0)',
-                          pointBackgroundColor: 'rgba(0, 188, 212, 0.9)',
+                        borderColor: 'rgba(231, 76, 60, 0.75)',
+                          backgroundColor: 'rgba(230, 75, 58, 0.3)',
+                          pointBorderColor: 'rgba(230, 75, 58, 0)',
+                          pointBackgroundColor: 'rgba(230, 75, 58, 0.9)',
                           pointBorderWidth: 1
                     }]
                 },
@@ -444,7 +444,7 @@
                         yAxes:[{
                         scaleLabel:{
                             display:true,
-                            labelString:'DHU(%)'
+                            labelString:'Pieces'
                         },
                         gridLines: {
                             color: "rgba(0, 0, 0, 0)",
